@@ -1,0 +1,28 @@
+{
+  "name": "landing-generator-pro",
+  "version": "1.0.0",
+  "description": "Genera landings 10/10 automáticamente con IA, Cloudinary y Shopify",
+  "main": "landing-generator-skill.js",
+  "scripts": {
+    "test": "node test.js",
+    "generate": "node landing-generator-skill.js"
+  },
+  "keywords": [
+    "landing",
+    "shopify",
+    "cloudinary",
+    "ai",
+    "generator",
+    "automation"
+  ],
+  "author": "Isaac - Gestoría y Proyectos SOELRB",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "node": ">=18.0.0"
+  }
+}
