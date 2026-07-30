@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lluvia Cero - Protección contra goteras por 10 años. Aplica tú mismo. 10x más barato.">
+    <meta name="theme-color" content="#0066cc">
+
+    <title>Lluvia Cero | Solución Definitiva para Goteras</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .cta-button {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+            background: #ff5520;
+        }
+
+        /* PROBLEMA */
+        .problema {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .problema h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .problema-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .problema-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .problema-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .problema-text li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .problema-text li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .problema-image {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8555 100%);
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        /* SOLUCIÓN */
+        .solucion {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .solucion h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .solucion-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .solucion-image {
+            background: linear-gradient(135deg, #00cc88 0%, #00aa66 100%);
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 200, 136, 0.2);
+            order: -1;
+        }
+
+        .solucion-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .solucion-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .solucion-text li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .solucion-text li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00cc88;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* BENEFICIOS */
+        .beneficios {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .beneficios h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .beneficio-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+            transition: all 0.3s;
+        }
+
+        .beneficio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 102, 204, 0.2);
+        }
+
+        .beneficio-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .beneficio-card h3 {
+            font-size: 1.3rem;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .beneficio-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CARACTERÍSTICAS */
+        .caracteristicas {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .caracteristicas h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .caracteristicas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .caracteristica {
+            padding: 20px;
+            border-left: 4px solid #0066cc;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .caracteristica h4 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .caracteristica p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* URGENCIA */
+        .urgencia {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8555 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .urgencia h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .urgencia p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .stock-info {
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+        }
+
+        .faq-question {
+            background: #0066cc;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #004a99;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: #666;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* GARANTÍA */
+        .garantia {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .garantia h2 {
+            font-size: 2.5rem;
+            color: #0066cc;
+            margin-bottom: 30px;
+        }
+
+        .garantia-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* ANIMACIONES */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .price {
+                font-size: 1.8rem;
+            }
+
+            .problema-content,
+            .solucion-content {
+                grid-template-columns: 1fr;
+            }
+
+            .solucion-image {
+                order: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>🌧️ Lluvia Cero</h1>
+            <p class="tagline">Solución Definitiva para Goteras</p>
+            <div class="price">$499</div>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Protección garantizada por 10 años</p>
+            <button class="cta-button" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+                ¡Comprar Ahora!
+            </button>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="problema">
+        <div class="container">
+            <h2>El Problema: Goteras en Casa</h2>
+            <div class="problema-content">
+                <div class="problema-text">
+                    <p><strong>¿Cansado de lidiar con goteras?</strong></p>
+                    <p>Las goteras no solo dañan tu casa, sino que:</p>
+                    <ul>
+                        <li>Generan moho y humedad peligrosa</li>
+                        <li>Dañan muebles y electrodomésticos</li>
+                        <li>Reparaciones costosas cada temporada</li>
+                        <li>Estrés y preocupación constante</li>
+                        <li>Soluciones que no duran</li>
+                    </ul>
+                </div>
+                <div class="problema-image">💧 Goteras</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section class="solucion">
+        <div class="container">
+            <h2>La Solución: Lluvia Cero</h2>
+            <div class="solucion-content">
+                <div class="solucion-image">✅ Sellado</div>
+                <div class="solucion-text">
+                    <p><strong>Lluvia Cero es la solución definitiva que:</strong></p>
+                    <ul>
+                        <li>Sella grietas y filtraciones permanentemente</li>
+                        <li>100% impermeable y resistente</li>
+                        <li>Fácil de aplicar (lo haces tú mismo)</li>
+                        <li>Protección garantizada por 10 años</li>
+                        <li>Costo mínimo comparado con reparaciones</li>
+                    </ul>
+                    <p style="margin-top: 20px;"><strong>Olvídate de las goteras para siempre.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios">
+        <div class="container">
+            <h2>3 Beneficios Principales</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🛡️</div>
+                    <h3>Protección 10 Años</h3>
+                    <p>Garantía completa por una década. Sin preocupaciones, sin reparaciones adicionales.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🔧</div>
+                    <h3>Aplicas Tú Solo</h3>
+                    <p>No necesitas contratistas caros. Fácil de usar. Instrucciones claras incluidas.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💰</div>
+                    <h3>10x Más Barato</h3>
+                    <p>$499 vs $5,000+ en reparaciones profesionales. Ahorra miles de pesos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section class="caracteristicas">
+        <div class="container">
+            <h2>Características Técnicas</h2>
+            <div class="caracteristicas-grid">
+                <div class="caracteristica">
+                    <h4>🌊 100% Impermeable</h4>
+                    <p>Fórmula premium que sella completamente cualquier grieta o fisura.</p>
+                </div>
+                <div class="caracteristica">
+                    <h4>⚡ Secado Rápido</h4>
+                    <p>Listo en 24 horas. Protección inmediata.</p>
+                </div>
+                <div class="caracteristica">
+                    <h4>🌡️ Resistente a Clima</h4>
+                    <p>Soporta lluvia, nieve, calor extremo y frío intenso.</p>
+                </div>
+                <div class="caracteristica">
+                    <h4>🔬 Fórmula Avanzada</h4>
+                    <p>Tecnología de última generación. Certificado internacionalmente.</p>
+                </div>
+                <div class="caracteristica">
+                    <h4>📦 Rendimiento Alto</h4>
+                    <p>Una lata cubre hasta 50m². Muy poco producto necesario.</p>
+                </div>
+                <div class="caracteristica">
+                    <h4>🎨 Inodoro</h4>
+                    <p>Sin olores desagradables. Seguro para familia y mascotas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCIA -->
+    <section class="urgencia">
+        <div class="container">
+            <h2>⏰ Stock Limitado</h2>
+            <p>Solo quedan 5 unidades disponibles esta semana</p>
+            <div class="stock-info">🔴 5 unidades disponibles | Oferta válida esta semana</div>
+            <p style="font-size: 1rem;">No esperes a que llueva nuevamente</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>¿Cuánto tiempo tarda en secar?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Lluvia Cero se seca completamente en 24 horas. Puedes exponer el área a lluvia después de ese tiempo.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>¿Necesito experiencia para aplicarlo?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No. Las instrucciones son simples. Cualquier persona puede aplicarlo en 30 minutos. Incluye video tutorial.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>¿Funciona en techos de diferentes materiales?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sí. Lluvia Cero funciona en concreto, metal, tejas, madera y fibrocemento. Compatible con casi todos los materiales.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>¿Qué pasa si no funciona?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Garantía 100% de satisfacción. Si no funciona en 90 días, devolvemos tu dinero completo. Sin preguntas.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>¿Cuánto rinde una lata?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Una lata de Lluvia Cero rinde aproximadamente 50m². La mayoría de casas necesitan 1-2 latas máximo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTÍA -->
+    <section class="garantia">
+        <div class="container">
+            <h2>100% Garantía de Satisfacción</h2>
+            <div class="garantia-badge">
+                ✓ 10 años de protección garantizada<br>
+                ✓ Devolvemos tu dinero si no funciona<br>
+                ✓ Soporte técnico por 10 años
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="contacto">
+        <div class="container">
+            <h2>¿Listo para Acabar con las Goteras?</h2>
+            <p>Solo $499 por protección garantizada de 10 años</p>
+            <button class="cta-button" onclick="alert('¡Gracias por tu interés! Contacta al WhatsApp: +52 1 234 567 8900')">
+                💬 Contactar por WhatsApp
+            </button>
+            <p style="margin-top: 20px; opacity: 0.9;">O llama al: <strong>+52 1 234 567 8900</strong></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Lluvia Cero</strong> - Solución Definitiva para Goteras</p>
+        <p>© 2024 Todos los derechos reservados</p>
+        <p style="font-size: 0.9rem;">Garantía de 10 años | 100% de satisfacción garantizada</p>
+    </footer>
+
+    <script>
+        // Animación de scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
